@@ -54,18 +54,41 @@ class MainClass {
   }
 
   //Exercício 03
-  public static int urna (int JoseCouve, int JoanaBravo, int RobertoNove) {
+  public static string urna (int JoseCouve, int JoanaBravo, int RobertoNove) {
     int maior = JoseCouve;
+    string vencedor;
 
-    if (maior < JoanaBravo)
+    if (maior < JoanaBravo) {
       maior = JoanaBravo;
-
-    else {
-      if (maior < RobertoNove)
-        maior = RobertoNove;
     }
 
-    return maior;
+    else {
+      if (maior < RobertoNove) {
+        maior = RobertoNove;
+      }
+    }
+
+    if (maior == JoseCouve) {
+      vencedor = "José Couve";
+      return vencedor;
+    }
+
+    else {
+      if (maior == JoanaBravo) {
+        vencedor = "Joana Bravo";
+        return vencedor;
+      }
+    
+      else {
+        vencedor = "Roberto Nove";
+        return vencedor;
+      }
+    }
+/*
+    else {
+      vencedor = "Roberto Nove";
+      return vencedor;
+    }*/
   }
 
 
@@ -106,19 +129,14 @@ class MainClass {
 
         case 3:
         //Variáveis
-        int eleitores = 0;
+        int sentinela = 1;
         int JoseCouve = 0;
         int JoanaBravo = 0;
         int RobertoNove = 0;
         int Branco = 0;
         int Nulo = 0;
         //Variáveis
-
-        Console.WriteLine ("Quantos eleitores iram votar? ");
-        eleitores = int.Parse(Console.ReadLine ());
-
-        /*Optei por utilizar um for pois não consegui resolver um erro com o while.*/
-        for (int i = 0; i < eleitores + 1; i++) {
+        while (sentinela == 1) {
           Console.WriteLine ("Digite o número do candidato (Caso não hoaja eleitores digite 1): \n 33 - José Couve\n 25 - Joana Bravo\n 10 - Roberto Nove\n 0 - Voto branco\n 4 - Voto nulo");
           int candidato = int.Parse(Console.ReadLine());
 
@@ -142,6 +160,10 @@ class MainClass {
             case 4:
               ++Nulo;
               break;
+
+            case 1:
+              sentinela = 0;
+              break;
             
             default:
               Console.WriteLine("Candidato inválido");
@@ -149,14 +171,11 @@ class MainClass {
           }
         }
 
-        Console.WriteLine ("O candidato vencedor foi {}", urna (JoseCouve, JoanaBravo, RobertoNove));
-        Console.WriteLine ("O total de votos em branco foi de {}", Branco);
-        Console.WriteLine ("O total de votos Nulos foi de {}", Nulo);
+        Console.WriteLine ("O candidato vencedor foi {0}", urna(JoseCouve, JoanaBravo, RobertoNove));
+        Console.WriteLine ("O total de votos em branco foi de {0}", Branco);
+        Console.WriteLine ("O total de votos Nulos foi de {0}", Nulo);
         break;
 
-        default:
-          Console.WriteLine ("Exercício inválido");
-          break;
     } 
   }
 }
