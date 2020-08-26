@@ -106,14 +106,19 @@ class MainClass {
 
         case 3:
         //Variáveis
-        bool sentinela = false;
+        int eleitores = 0;
         int JoseCouve = 0;
         int JoanaBravo = 0;
         int RobertoNove = 0;
         int Branco = 0;
         int Nulo = 0;
         //Variáveis
-        while (!sentinela) {
+
+        Console.WriteLine ("Quantos eleitores iram votar? ");
+        eleitores = int.Parse(Console.ReadLine ());
+
+        /*Optei por utilizar um for pois não consegui resolver um erro com o while.*/
+        for (int i = 0; i < eleitores + 1; i++) {
           Console.WriteLine ("Digite o número do candidato (Caso não hoaja eleitores digite 1): \n 33 - José Couve\n 25 - Joana Bravo\n 10 - Roberto Nove\n 0 - Voto branco\n 4 - Voto nulo");
           int candidato = int.Parse(Console.ReadLine());
 
@@ -136,10 +141,6 @@ class MainClass {
 
             case 4:
               ++Nulo;
-              break;
-
-            case 1:
-              sentinela = true;
               break;
             
             default:
