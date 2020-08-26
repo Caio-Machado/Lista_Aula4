@@ -106,16 +106,41 @@ class MainClass {
 
         case 3:
         //Variáveis
-        int eleitores = 0
-        int JoseCouve = 0
-        int JoanaBravo = 0
-        int RobertoNove = 0
-        int Branco = 0
-        int Nulo = 0
+        bool sentinela = false;
+        int eleitores = 0;
+        int JoseCouve = 0;
+        int JoanaBravo = 0;
+        int RobertoNove = 0;
+        int Branco = 0;
+        int Nulo = 0;
         //Variáveis
         while
-          Console.WriteLine ("Digite o número do candidato: \n 33 - José Couve\n 25 - Joana Bravo\n 10 - Roberto Nove\n 0 - Voto branco\n 4 - Voto nulo");
-          int candidato = int.Parse(Console.ReadLine())
+          Console.WriteLine ("Digite o número do candidato (Caso não hoaja eleitores digite 1): \n 33 - José Couve\n 25 - Joana Bravo\n 10 - Roberto Nove\n 0 - Voto branco\n 4 - Voto nulo");
+          int candidato = int.Parse(Console.ReadLine());
+
+          switch (candidato) {
+            case 33:
+              ++JoseCouve;
+
+            case 25:
+              ++JoanaBravo;
+
+            case 10:
+              ++RobertoNove;
+
+            case 0:
+              ++Branco;
+
+            case 4:
+              ++Nulo;
+
+            case 1:
+              
+            
+            default:
+              Console.WriteLine("Candidato inválido");
+              break;
+          }
 
         default:
           Console.WriteLine ("Não");
