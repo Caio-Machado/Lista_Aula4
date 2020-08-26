@@ -1,25 +1,3 @@
-Algoritmos e Estruturas de Dados I
-2020/2
-
-Lista Prática 01
-Marlon Ferrari
-•
-25 de ago. Editado às 25 de ago.
-100 pontos
-Data de entrega: 20:00
-Desenvolva a lista a seguir utilizando as estruturas previamente conhecidas. Utilize Switch Case quando possível e DO-WHILE é um diferencial;
-Entrega: Link do repositório GITHUB.
-
-Lista_01.txt
-Texto
-Comentários da turma
-
-
-Seus trabalhos
-Atribuído
-Comentários particulares
-
-
 LISTA DE EXERCÍCIOS 
 
 1- Criar um programa que leia dois números inteiros, e que solicite ao usuário qual a operação 
