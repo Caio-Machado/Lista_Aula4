@@ -113,7 +113,7 @@ class MainClass {
         int Branco = 0;
         int Nulo = 0;
         //Variáveis
-        while (sentinela == false) {
+        while (!sentinela) {
           Console.WriteLine ("Digite o número do candidato (Caso não hoaja eleitores digite 1): \n 33 - José Couve\n 25 - Joana Bravo\n 10 - Roberto Nove\n 0 - Voto branco\n 4 - Voto nulo");
           int candidato = int.Parse(Console.ReadLine());
 
@@ -140,6 +140,7 @@ class MainClass {
 
             case 1:
               sentinela = true;
+              break;
             
             default:
               Console.WriteLine("Candidato inválido");
